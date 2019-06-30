@@ -90,6 +90,27 @@ class File_Model{
     }
 
 
+    public function delete(){
+
+
+        $query = "DELETE FROM ".$this->table_name. " WHERE id=:id";
+        
+        $stmt = $this->connection->prepare($query);
+        $stmt->bindParam(':id', $this->id);
+
+
+        if($stmt->execute()){
+
+            return true;
+
+        }else{
+
+            echo "Something went wrong. Error - ".$stmt->error;
+            return false;
+        }
+
+    }
+
 
 
 

@@ -29,7 +29,7 @@ if($num_rows){
             "mime_type" =>  $mime_type,
             "size"  =>  $size,
             "md5"   =>  $md5,
-            "dimesions" =>  $dimensions,
+            "dimensions" =>  $dimensions,
             "created_at"    =>  $created_at
         ];
 
