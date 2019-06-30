@@ -49,9 +49,9 @@ $records = $curl->find_all();
       <th scope="col">Extension</th>
       <th scope="col">Mime Type</th>
       <th scope="col">Size</th>
-      <th scope="col">MD5</th>
       <th scope="col">Dimensions</th>
       <th scope="col">Created At</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -62,9 +62,11 @@ $records = $curl->find_all();
       <td><?= $record->extension; ?></td>
       <td><?= $record->mime_type; ?></td>
       <td><?= formatSizeUnits($record->size); ?></td>
-      <td><?= $record->md5; ?></td>
       <td><?= $record->dimensions; ?></td>
       <td><?= $record->created_at; ?></td>
+      <td><form method='POST' action='delete.php'><input type='hidden' name='delete_id' value="<?= $record->id; ?>">
+      <input type='hidden' name='delete_id' value="<?= $record->id; ?>"> <input type='hidden' name='delete_name' value="<?= $record->name; ?>">
+      <button class='btn btn-danger' type='submit'>delete</button></form></td>
     </tr>
 <?php endforeach;?>
   </tbody>

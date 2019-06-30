@@ -19,7 +19,7 @@ $file_model->id = $request_data->id;
 
 if(!empty($request_data) && $file_model->delete()){
 
-    echo json_encode(['message' => 'Record deleted']);
+    echo json_encode(['message' => 'Record deleted','status' => true]);
 
 }else{
 

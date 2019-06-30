@@ -44,7 +44,7 @@ class Curl_Model
 
     }
 
-    public function find_record($payload)
+    public function find_record($id)
     {
 
         try {
@@ -53,7 +53,7 @@ class Curl_Model
                 $this->response = $this->http_client->request('GET', "http://localhost/capify/rest_api/api/file/show.php",
                     [
                         'query' => [
-                            'id' => 1
+                            'id' => $id
                         ],
                         'verify' => false
                     ]);
@@ -108,6 +108,38 @@ class Curl_Model
         }
 
 
+
+
+    }
+
+
+    public function destroy($id)
+    {
+
+        try {
+
+
+                $this->response = $this->http_client->request('POST', "http://localhost/capify/rest_api/api/file/delete.php",
+                    [
+                        'json' => [
+                            'id' => $id,
+                        ],
+                        'headers' => [
+                            'Content-Type' => 'application/json',
+                            'X-HTTP-Method-Override' => "DELETE"
+                        ],
+                        'verify' => false,
+                    ]);
+                    
+
+            $this->status_code = $this->response->getStatusCode();
+            return $this->response->getBody();
+
+        } catch (Exception $e) {
+
+            echo "Exception: " . $e;
+
+        }
 
 
     }
