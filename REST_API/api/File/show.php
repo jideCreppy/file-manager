@@ -28,8 +28,8 @@ if($file_model->show()){
 }else{
 
     echo json_encode(['message' => 'No record found']);
-    http_response_code(404);
-    die();
+    // http_response_code(404);
+    // die();
 
 }
 
