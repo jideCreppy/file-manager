@@ -1,7 +1,12 @@
+
 Requirements:
 
-- RUN npm install -g testcafe
+- RUN: npm install -g testcafe
 
-Change directory to Applications
+Change directory to Applications folder
 
-- RUN composer install
+- RUN: composer install
+
+Start Containers
+
+- In the projects root directory run docker-compose up
