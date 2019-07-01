@@ -4,7 +4,7 @@ const download_link = Selector('td a:first-of-type');
 const delete_button = Selector('form #button_delete:first-of-type');
 
 fixture `Getting Started`
-    .page `http://localhost:8080/public/index.php`;
+    .page `http://localhost:8081/public/index.php`;
 
 test('Perform Text File Upload', async t => {
 

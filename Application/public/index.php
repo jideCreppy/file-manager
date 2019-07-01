@@ -26,7 +26,7 @@ $records = $curl->find_all();
     <div class="row">
         <div class="col-12">
             <div class="jumbotron" id="hero-bg">
-                <h1 class="display-4 animated rollIn">File Manager</h1>
+                <h1 class="display-4 animated bounceInRight">File Manager</h1>
                 <p class="lead">- This is a simple application that uses an API to manage file upload(including storage
                     of file meta data).</p>
                 <hr class="my-4">

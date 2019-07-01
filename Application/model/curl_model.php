@@ -29,7 +29,7 @@ class Curl_Model
 
         try {
             $this->response = $this->http_client->request('GET',
-                "http://{$_SERVER['REMOTE_ADDR']}:9000/api/file/all.php",
+                "http://{$_SERVER['REMOTE_ADDR']}:9091/api/file/all.php",
                 [
                     'verify' => false
                 ]);
@@ -54,7 +54,7 @@ class Curl_Model
 
         try {
             $this->response = $this->http_client->request('POST',
-                "http://{$_SERVER['REMOTE_ADDR']}:9000/api/file/create.php", [
+                "http://{$_SERVER['REMOTE_ADDR']}:9091/api/file/create.php", [
                     'json' => [
                         'name' => $payload['name'],
                         'extension' => $payload['extension'],
@@ -97,7 +97,7 @@ class Curl_Model
 
         try {
             $this->response = $this->http_client->request('POST',
-                "http://{$_SERVER['REMOTE_ADDR']}:9000/api/file/delete.php",
+                "http://{$_SERVER['REMOTE_ADDR']}:9091/api/file/delete.php",
                 [
                     'json' => [
                         'id' => $id,

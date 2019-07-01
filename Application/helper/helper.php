@@ -29,5 +29,5 @@ function formatSizeUnits($bytes)
  * applications home page
  */
 function redirect_home(){
-    return header("Location: http://localhost:8080/public/index.php");
+    return header("Location: http://localhost:8081/public/index.php");
 }
