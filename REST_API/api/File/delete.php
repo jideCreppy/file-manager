@@ -8,15 +8,18 @@ header('Access-Control-Allow-Headers:Access-Control-Allow-Header, Access-Control
 require_once('../../config/database.php');
 require_once('../../model/File_Model.php');
 
+// GET JSON POST body
 $request_data = json_decode(file_get_contents("php://input"));
 
+// Create instance of the database class
+// Instance created is passed to the file_model constructor
 $database   =   new Database();
 $file_model  =   new File_Model($database->connect());
 
-
+// Populate FILE_MODEL class object with the record id
 $file_model->id = $request_data->id;
 
-
+// Attempt to delete a new record
 if(!empty($request_data) && $file_model->delete()){
 
     echo json_encode(['message' => 'Record deleted','status' => true]);
