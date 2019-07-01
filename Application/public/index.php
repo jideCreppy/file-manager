@@ -33,14 +33,15 @@ $records = $curl->find_all();
   <form method="POST" action="upload.php" enctype="multipart/form-data">
   <div class="form-group">
     <label for="exampleFormControlFile1">Please select a file to upload.</label>
-    <input type="file" name="file_upload" class="form-control-file" id="exampleFormControlFile1">
+    <input type="file" name="file_upload" class="form-control-file" id="FileFormControl" required>
   </div>
   <div class="form-group">
-  <button type="submit" class='btn btn-primary'>Upload</button>
+  <button type="submit" id="SubmitUpload" class='btn btn-primary'>Upload</button>
   </div>
 </form>
 </div>
 <h5>Free space: <?=formatSizeUnits(disk_total_space("C:"));?></h5>
+<?php if(isset($records->data) && count($records->data)){ ?>
 <div class="table-responsive">
 <table class="table table-hover">
   <thead>
@@ -72,13 +73,13 @@ $records = $curl->find_all();
       ?></td>
       <td><form method='POST' action='delete.php'><input type='hidden' name='delete_id' value="<?= $record->id; ?>">
       <input type='hidden' name='delete_id' value="<?= $record->id; ?>"> <input type='hidden' name='delete_name' value="<?= $record->name; ?>">
-      <button class='btn btn-danger' type='submit'>delete</button></form></td>
+      <button class='btn btn-danger' id="button_delete" type='submit'>delete</button></form></td>
     </tr>
 <?php endforeach;?>
   </tbody>
 </table>
 </div>
-
+<?php }?>
 </div>
 </div>
 </div>
