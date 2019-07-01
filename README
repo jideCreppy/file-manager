@@ -1,0 +1,7 @@
+Requirements:
+
+- RUN npm install -g testcafe
+
+Change directory to Applications
+
+- RUN composer install

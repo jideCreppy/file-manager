@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/Application/vendor/codeguy/upload" />
+      <excludeFolder url="file://$MODULE_DIR$/Application/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/Application/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/Application/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/Application/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/Application/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/Application/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/Application/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/Application/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/Application/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/Application/vendor/symfony/translation-contracts" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,46 @@
+version: "3"
+services:
+    www:
+        build: .
+        ports:
+            - "8080:80"
+        volumes:
+            - ./Application:/var/www/html/
+        networks:
+            - default
+        restart: "always"
+    app:
+        build: .
+        ports:
+            - "9000:80"
+        volumes:
+            - ./REST_API:/var/www/html/
+        restart: "always"
+        links: 
+            - db:db
+    db:
+        image: centos/mysql-57-centos7
+        ports:
+            -  "3306:3306"
+        environment:
+            MYSQL_DATABASE: file_manager
+            MYSQL_USER: user
+            MYSQL_PASSWORD: password
+            MYSQL_ROOT_PASSWORD: password
+        volumes:
+            - ./dump:/docker-entrypoint-initdb.d
+            - persistent:/var/lib/mysql
+        networks:
+            - default
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links: 
+            - db:db
+        ports:
+            - 8000:80
+        environment:
+            MYSQL_USER: user
+            MYSQL_PASSWORD: password
+            MYSQL_ROOT_PASSWORD: password
+volumes:
+    persistent:

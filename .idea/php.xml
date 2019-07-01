@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/Application/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/Application/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/Application/vendor/composer" />
+      <path value="$PROJECT_DIR$/Application/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/Application/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/Application/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/Application/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/Application/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/Application/vendor/codeguy/upload" />
+      <path value="$PROJECT_DIR$/Application/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/Application/vendor/guzzlehttp/guzzle" />
+    </include_path>
+  </component>
+</project>
