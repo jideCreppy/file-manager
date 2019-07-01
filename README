@@ -23,7 +23,7 @@ Import SQL file using phpmyadmin
 
 - Enter localhost:8000 on a web browser
 - User: user , Password: password
-- Import file_manager.sql into the file_manager database (the required file_manager.sql is saved th ethe project root)
+- Import file_manager.sql into the file_manager database (the required file_manager.sql file is saved the project root folder)
 
 
 Open Project
@@ -38,7 +38,7 @@ Upload Files
 
 Download Files
 
-- To download files click on the file name
+- To download a file click on the file name
 
 
 Delete Files
