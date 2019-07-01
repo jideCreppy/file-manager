@@ -1,7 +1,7 @@
 
 Requirements: 
 
-- Compose, NPM, Docker
+- Composer, NPM, Docker
 
 
 STEPS:
@@ -9,7 +9,7 @@ STEPS:
 - RUN: npm install -g testcafe
 
 
-Change directory to Applications folder within file-manager
+Change directory to the applications folder within file-manager
 
 - RUN: composer install
 
@@ -33,7 +33,7 @@ Open Project
 
 Upload Files
 
-- Two sample files are provided in the samplefiles directory
+- Two sample files are provided in the samplefiles folder within project root folder
 
 
 Download Files
