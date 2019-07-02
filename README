@@ -1,52 +1,53 @@
 
-Requirements: 
+# Requirements: 
 
 - Composer, NPM, Docker
 
 
-STEPS:
+# STEPS:
 
 - RUN: npm install -g testcafe
 
 
-Change directory to the applications folder within file-manager
+## Change directory to the applications folder within file-manager
 
 - RUN: composer install
 
 
-Start Containers
+## Start Containers
 
 - In the projects root directory run docker-compose up
 
 
-Import SQL file using phpmyadmin
+## Import SQL file using phpmyadmin
 
-- Enter localhost:8000 on a web browser
-- User: user , Password: password
-- Import file_manager.sql into the file_manager database (the required file_manager.sql file is saved the project root folder)
+```php
+ Enter localhost:8000 on a web browser
+ User: user , Password: password
+ Import file_manager.sql into the file_manager database (the required file_manager.sql file is saved the project root folder)
+```
 
-
-Open Project
+## Open Project
 
 - Navigate to localhost:8081/public
 
 
-Upload Files
+## Upload Files
 
 - Two sample files are provided in the samplefiles folder within project root folder
 
 
-Download Files
+## Download Files
 
 - To download a file click on the file name
 
 
-Delete Files
+## Delete Files
 
 - To delete files click on the delete button
 
 
-Automated Test
+## Automated Test
 
 - Change directory to the project root folder
 - RUN: testcafe chrome test/test.js
