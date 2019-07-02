@@ -10,7 +10,7 @@ $curl = new Curl_Model();
 $storage = new \Upload\Storage\FileSystem('uploads');
 $file = new \Upload\File('file_upload', $storage);
 
-$file->setName(time().'_'.$file->getNameWithExtension());
+$file->setName(time().'_'.$file->getName());
 
 // Validate file upload. SET max size to 50M
 $file->addValidations(array(
