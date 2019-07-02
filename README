@@ -1,29 +1,54 @@
-# Foobar
+# File API Manager
 
-Foobar is a Python library for dealing with word pluralization.
+# Requirements: 
 
-## Installation
+ Composer, NPM, Docker
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
-```bash
-pip install foobar
+# STEPS:
+
+- RUN: npm install -g testcafe
+
+
+## Change directory to the applications folder within file-manager
+
+- RUN: composer install
+
+
+## Start Containers
+
+- In the projects root directory run docker-compose up
+
+
+## Import SQL file using phpmyadmin
+
+```php
+ Enter localhost:8000 on a web browser
+ User: user , Password: password
+ Import file_manager.sql into the file_manager database (the required file_manager.sql file is saved the project root folder)
 ```
 
-## Usage
+## Open Project
 
-```python
-import foobar
+- Navigate to localhost:8081/public
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## Upload Files
 
-Please make sure to update tests as appropriate.
+- Two sample files are provided in the samplefiles folder within project root folder
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+
+## Download Files
+
+- To download a file click on the file name
+
+
+## Delete Files
+
+- To delete files click on the delete button
+
+
+## Automated Test
+
+- Change directory to the project root folder
+- RUN: testcafe chrome test/test.js
