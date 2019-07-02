@@ -10,7 +10,7 @@
 RUN: npm install -g testcafe
 ```
 
-## Change directory to the applications folder within file-manager
+## Change directory to the application folder within file-manager
 ```php
 RUN: composer install
 ```
